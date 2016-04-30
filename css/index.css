@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+#main {
+    width: 640px;
+    height: 960px;
+    position: relative;
+    overflow: hidden;
+}
+
+#list > li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+    z-index: 5;
+    display: none;
+}
+#list > li.zIndex {
+    z-index: 6;
+}
+#list > li:nth-of-type(1) {
+    background: black;
+display: block;
+
+}
+.header {
+    width: 490px;
+    /*margin:5.8% auto 3.7%;*/
+    position: relative;
+    height: 121px;
+}
+.header img {
+    position: absolute;
+}
+.header .p1_head2 {
+    -webkit-animation: 5s infinite myshake;
+    animation: 10s infinite myshake;
+}
+.p1_headTitle {
+    font-size: 40px;
+    width: 82%;
+    padding: 40% 0 0 45%;
+}
+.p1_headTitle b {
+    font-weight: 900;
+    color: #db6941;
+    font-size: 37px;
+}
+.p1_center {
+    position: relative;
+    width: 542px;
+    height: 600px;
+    margin: 0 auto;
+}
+.p1_center .centerB1 {
+    width: 20%;
+    height: 18%;
+    position: absolute;
+    top: 0%;
+    left: 26%;
+}
+
+.p1_center .centerB2 {
+    position: absolute;
+    width: 23%;
+    height: 19%;
+    top: 10%;
+    left: 67%;
+}
+.p1_center .centerB3 {
+    position: absolute;
+    width: 27%;
+    height: 18%;
+    top: 91%;
+    left: 0%;
+
+}
+.p1_center span {
+    display: inline-block;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 366%;
+    font-size: 30px;
+    color:#ed5e61;
+    background: rgba(255, 255, 255, 0.3) !important;
+    filter: Alpha(opacity=30);
+    border: 1px solid white;
+
+}
+.p1_center img {
+    position: absolute;
+}
+.p1_center img:nth-of-type(1) {
+    top: 64px;
+    left: 400px;
+}
+
+.p1_footer {
+    height: 100%;
+    font-size: 190%;
+    color: lightskyblue;
+}
+
+.p1_footer div {
+    position: absolute;
+}
+
+.p1_footer div:nth-of-type(1) {
+    left: 30%;
+    bottom: 13%;
+    font-size: 200%;
+}
+
+.p1_footer div:nth-of-type(2) {
+    left: 40%;
+    bottom: 25%;
+    font-size: 150%;
+}
+
+.p1_footer div:nth-of-type(3) {
+    bottom: 20%;
+    left: 63%;
+}
+
+.p1_carLeft {
+    animation-delay: .5s;
+}
+
+.p1_roll {
+    animation-delay: 1s;
+}
+
+/*第一页完成*/
+#list li:nth-child(2),#list li:nth-child(3){
+    /*background: url("../img/ab.png");*/
+    margin-top: 10px;
+    text-align: center;
+    line-height: 200%;
+    font-size: 120%;
+    color: #00b7f0;
+}
+#list li:nth-child(2) h2{
+    font-size: 200%;
+    padding-top: 50px;
+}
+
+#list li:nth-child(2) h3,#list li:nth-child(3) h3{
+    font-size: 150%;
+    padding-top: 20px;
+    color: #fff;
+}
+.arrow {
+    width: 83px;
+    height: 35px;
+    background: url("../img/arr1.png") no-repeat;
+    z-index: 8;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    margin-left: -45px;
+    animation: 1s infinite arrowMove;
+    -webkit-animation: 1s infinite arrowMove;
+    -o-animation: 1s infinite arrowMove;
+}
+.arrow1{
+    bottom: 30px;
+}
+@keyframes arrowMove {
+    0% {
+        transform: translateY(0);
+        opacity: 0
+    }
+    50% {
+        transform: translateY(-30px);
+        opacity: 1
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0
+    }
+
+}
+
+.music {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 3%;
+    right: 10%;
+    width: 45px;
+    height: 45px;
+    background: url("../img/music.svg") no-repeat;
+    background-size: 100% 100%;
+}
+@-webkit-keyframes myshake {
+    0% {
+        opacity: 0;
+        transform: scale(1)
+    }
+    30% {
+        opacity: 0.8;
+        transform: scale(1.15)
+    }
+    70% {
+        opacity: 0.5;
+        transform: scale(1.07)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1)
+    }
+}
+
+@keyframes myshake {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.15)
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.07)
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1)
+    }
+}
